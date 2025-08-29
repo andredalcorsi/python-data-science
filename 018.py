@@ -4,37 +4,32 @@
 #Quantos produtos custam mais de R$1000,00
 #Qual é o produto mais barato
 
-nome_prod = ""
-mais_barato = 0
+nome_prod = " "
+mais_barato = None
 total_compra = 0
 mais_mil = 0
-contador = 0
+continuar = " "
+preco_prod = 0
 
 while True:
-
-
-    prod = input('Digite o nome do produto: ')
+    nome_prod = input('Digite o nome do produto: ')
     preco_prod = float(input('Digite o preço do produto: '))
 
     total_compra+=preco_prod
 
-    if preco_prod > 1000:
+    if preco_prod >= 1000:
         mais_mil+=1
-    if (preco_prod < mais_barato):
+
+    if mais_barato is None or preco_prod < mais_barato:
         mais_barato = preco_prod
         nome_barato = nome_prod
 
-    contador +=1
+    continuar = input('Deseja continuar? ').strip().upper()[0]
 
-    continuar = ' '
-
-    while continuar not in 'SN':
-            continuar = input('Deseja continuar? ').strip().lower()[0]
     if continuar == 'N':
+        print('------------------------------------------------------------------------------------')
+        print(f'Total Gasto Na Compra: {total_compra}')
+        print(f'Produtos que custam mais de R$1000.00: {mais_mil}')
+        print(f'Produto mais barato é {nome_barato}, custando R${mais_barato}!')
         break
-
-print('------------------------------------------------------------------------------------')
-print(f'Total Gasto Na Compra: {total_compra}\n'
-      f'Produtos que custam mais de R$1000.00: R${mais_mil}\n'
-      f'Produto mais barato é {nome_barato}, custando R${mais_barato}! ')
 

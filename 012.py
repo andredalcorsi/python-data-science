@@ -19,5 +19,3 @@ while True:
         print('Você acertou!\n'
               f'Número de tentativas: {contador+1} ')
         break
-
-sasasasa
