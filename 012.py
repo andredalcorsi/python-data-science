@@ -20,3 +20,4 @@ while True:
               f'Número de tentativas: {contador+1} ')
         break
 
+sasasasa
