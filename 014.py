@@ -8,10 +8,11 @@ terceiro = 0
 
 n = int(input('Digite um número: '))
 
-while contador >=0 and contador < n:
+while contador < n:
 
     primeiro = segundo
     segundo = terceiro
     terceiro = primeiro+segundo
     contador+=1
+
     print(f'{terceiro}')

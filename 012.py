@@ -4,7 +4,7 @@
 import random
 
 contador = 0
-pc = random.randint(1, 11)
+pc = random.randint(0,10)
 adivinha = int(input('Digite um número entre 1 e 10: '))
 
 while True:
