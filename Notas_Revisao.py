@@ -169,159 +169,58 @@ while True:
         print('Cuidado ao dividir por 0 ')
     except:
         print('Erro não documentado')
+'''
+'''
 
+#Funções 
 
-def mensagem_boas_vindas():
-    print('------------------ OOIIIIII ---------------------------')
+def quebralinha():
+    print('-%-'*20)
+    
+def mensagem (x): 
+    quebralinha()
+    print(x)
+    quebralinha()
 
-def mensagem_personalizada(msg):
-    print('----------------')
-    print(msg)
-    print('----------------')
+def area(x,y): 
+    A = x * y
+    return A 
 
-def area_esfera(raio):
-    A = (4 * raio ** 2 * 3.1415)
-    return A
+quebralinha()
+mensagem('Bem-vindo ao Senai')
+mensagem('Bem-vindo ao Curso de Python') 
+area_do_terreno = area (x = 5, y = 7)
+print(area_do_terreno)
 
-#1 Caso
-mensagem_boas_vindas()
+#Tuplas 
 
-# 2 Caso
-nome = input('Digite seu nome: ')
-mensagem_personalizada(nome)
+carro = ('Ferrari', 'Vermelha', 2025)
 
-# 3 Caso
-Area_Esfera_1 = area_esfera(3)
-Area_Esfera_2 = area_esfera(6)
-
-print(Area_Esfera_1)
-
-
-#Tuplas
-carro = ('Ferrari', 'Vermelha', '2023')
+#Fatiamento 
 
 print(carro)
+print(carro([0])
+print(carro[0:2])
+print(carro[-1])
 
-for ele in carro:
-    print(ele)
+#Iteração
+for i in carro:
+    print(i)
 
-for cont in range(0, len(carro)):
-    print(carro[cont])
+for i in range (0, len(carro)):
+print(carro[i])
 
+for pos, carac in enumerate(carro): 
+print(f'{pos} - {carac}')
 
-b = (1,2,3)
-a = (4,5,6)
-c = a + b
+idades = (8,9,52,32,66,77,100,2)
 
-print(c)
-print(sorted(c))
-# Posição
-print(c.index(3))
-
-# Listas
-
-Nomes = ['João', 'Camila', 'Armando', 'Raskolnikov', 'Felipe']
-Nomes[0] = 'Gustavo'
-Nomes.insert(3, 'Thiago')
-Nomes.append('Karina')
-
-print(Nomes)
-
-nomes = []
-
-for ele in range(5):
-    nomes.append(input('Digite seu nome: '))
-
-print(nomes)
-
-
-Idades = [5, 4, 3, 2, 1]
-
-print(sum(Idades))
-print(len(Idades))
-print(f'A média é {sum(Idades) / len(Idades)}')
-print(max(Idades))
-print(min(Idades))
-
-
-Gastos_Fevereio = [2,3,4,5,6,7]
-Gastos_Janeiro  = [1,2,3,4,5,6]
-
-Soma_geral = []
-for ele in range(0, len(Gastos_Fevereio)):
-    Soma_geral.append(Gastos_Fevereio[ele] + Gastos_Janeiro[ele])
-
-print(Soma_geral)
-print(sum(Gastos_Fevereio) + sum(Gastos_Janeiro))
-
-# Listas Aninhadas
-
-Alunos = []
-dados = []
-
-for x in range(3):
-    dados.append(input('Digite o seu nome: '))
-    dados.append(int(input('Digite a sua idade: ')))
-    Alunos.append(dados[:])
-    dados.clear()
-
-print(Alunos)
-
-Alunos = []
-nomes = []
-idades = []
-
-for x in range(3):
-    nomes.append(input('Digite o seu nome: '))
-    idades.append(int(input('Digite a sua idade: ')))
-
-Alunos.append(nomes[:])
-Alunos.append(idades[:])
-
-print(Alunos)
-
-
-bd = [['Felipe', 'Armando', 'Clarice'], [19, 8, 6]]
-print(bd[0])
-print(bd[1])
-print(bd[0][0])
-print(bd[1][0])
-
-for ele in bd[0]:
-    print(ele)
-
-
-
-
-
-carro = {}
-concessionaria = []
-
-for c in range(0, 3):
-    carro['nome'] = str(input('Nome do Carro '))
-    carro['ano'] = int(input('Ano do Carro '))
-    concessionaria.append(carro.copy())
-    print(concessionaria)
-
-
-concessionaria = {}
-carro_nome = []
-carro_ano = []
-
-for i in range(3):
-    carro_nome.append(input('Nome: '))
-    carro_ano.append(int(input('Ano: ')))
-
-concessionaria['Nome'] = carro_nome[:]
-concessionaria['Ano'] = carro_ano[:]
-
-print(concessionaria)
-
-concessionaria = {'Nome': ['a', 'b', 'c'], 'Ano': [2000, 2001, 2002]}
-
-print(concessionaria.values())
-print(concessionaria.keys())
-print(concessionaria.items())
-print(concessionaria)
+print(max(idades))
+print(min(idades))
+print(sum(idades))
+print(len(idades))
+print(sum(idades) / len(idades))
+print(sorted(idades))
+print(sorted(idades, reverse = True))
 
 '''
