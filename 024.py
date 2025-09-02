@@ -1,6 +1,6 @@
 #Usando tuplas, leia um número de 0 a 15, e retorne esse número escrito por extenso
 try: 
-    numeros = ('zero',
+    numero_str = ('zero',
             'um', 
             'dois', 
             'três', 
@@ -17,9 +17,11 @@ try:
             'quatorze', 
             'quinze')
 
-    n = int(input('Digite um número: '))
+    numero_int = int(input('Digite um número: '))
 
-    print(numeros[n])
+    print(numero_str[numero_int])
 
 except IndexError:
     print('Número inválido, digite um número entre 0 e 15')
+except ValueError:
+    print('Valor inválido, digite um número entre 0 e 15')
