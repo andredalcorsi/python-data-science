@@ -169,8 +169,6 @@ while True:
         print('Cuidado ao dividir por 0 ')
     except:
         print('Erro não documentado')
-'''
-'''
 
 #Funções 
 
@@ -223,4 +221,53 @@ print(sum(idades) / len(idades))
 print(sorted(idades))
 print(sorted(idades, reverse = True))
 
-'''
+#Listas
+
+carro = ['Ferrari', 'Vermelha', '2023']
+
+print(carro)
+carro[1] = 'Amarelo'
+print(carro)
+carro.append('Gasolina')
+print(carro) 
+carro.insert(1, '979CV')
+print(carro)
+carro.pop(-1)
+print(carro)
+carro.remove('979CV')
+print(carro) 
+
+#Operações 
+
+a = [1,2,3]
+b = [3,2,1]
+
+print(a+b)
+print(a*b)
+
+#Cópia de Listas 
+a = [1,2,3]
+b = a[:]
+
+b.append(1)
+
+print(f'{a}\n{b}')
+
+#Listas Aninhadas
+
+Alunos = []
+dados = []
+
+for i in range(3):
+    dados.append(input('Nome: '))
+    dados.append(int(input('Idade: ')))
+    Alunos.append(dados[:])
+    dados.clear()
+    print(Alunos)
+
+list = [['joão', 56], ['Maria', 74], ['thiago', 5]]
+
+print(lista[0][0])
+
+for i in lista:
+    print(i[1])
