@@ -269,5 +269,40 @@ list = [['joão', 56], ['Maria', 74], ['thiago', 5]]
 
 print(lista[0][0])
 
-for i in lista:
-    print(i[1])
+    for i in lista:
+        print(i[1])
+
+#Colunas
+
+nomes = []
+idades = []
+sexos = []
+Alunos = []
+
+
+for i in range(3):
+    nomes.append(input('Nome: '))
+    idades.append(int(input('Idade: ')))
+    sexos.append(input('Sexo[M/F]: ').strip().upper()[0])
+
+Alunos.append(nomes)
+Alunos.append(idades)
+Alunos.append(sexos)
+print(nomes)
+print(idades)
+print(sexos
+
+print(f'A lista final é {Alunos}')
+
+Alunos = [[],[],[]]
+
+for i in range(3):
+    Alunos[0].append(input('Nome: '))
+    Alunos[1].append(int(input('Idade: ')))
+    Alunos[2].append(input('Sexo[M/F]: ').strip().upper()[0])
+    print(Alunos)
+
+print(f'O Aluno mais velho é '
+      f'\n{Alunos[0][Alunos[1].index(max(Alunos[1]))]}')
+
+'''
