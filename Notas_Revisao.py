@@ -305,4 +305,56 @@ for i in range(3):
 print(f'O Aluno mais velho é '
       f'\n{Alunos[0][Alunos[1].index(max(Alunos[1]))]}')
 
+#Dicionários
+
+df = {'Nome': 'Luis Tatin', 'Idade':56}
+print(df['Nome'])
+df['Sexo'] = 'M'
+#del df['Idade']
+
+print(df)
+print(df.values())
+print(df.keys())
+print(df.items())
+
+df = [{'Marca': A, 'Modelo': 'X', 'Ano': 2000},
+      {'Marca': B, 'Modelo': 'Y', 'Ano': 2001},
+      {'Marca': C, 'Modelo': 'Z', 'Ano': 2002},]
+
+#print(df[1]['Marca'])
+
+carro = {}
+
+df = []
+
+for i in range(3):
+
+    carro['Marca'] = input('Marca: ')
+    carro['Modelo'] = input('Modelo: ')
+    carro['Ano'] = int(input('Ano: '))
+    df.append(carro.copy())
+print(df)
+
+#2
+
+df = { 'Marca': ['A', 'B', 'C'],
+      'Modelo': ['X', 'Y', 'Z']
+      'Ano'   : ['2000', '2001', '2001']}
+
+#print(df['Modelo'][1])
+
+Marca = []
+Modelo = []
+Ano = []
+df = {}
+
+for i in range(3):
+        Marca.append(input('Marca: '))
+        Modelo.append(input('Modelo: '))
+        Ano.append(int(input('Ano: ')))
+
+df['Marca'] = Marca[:]
+df['Modelo'] = Modelo [:]
+df['Ano'] = Ano[:]
+print(df)
 '''
