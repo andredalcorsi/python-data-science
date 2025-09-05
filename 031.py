@@ -2,27 +2,21 @@
 #Em seguida, exiba a média das notas dos alunos.
 
 notas = {}
-
-notas_df = []
+nota_df = []
 
 while True:
 
-    notas['Alunos'] = input('Digite o nome do aluno [Digite sair para terminar o programa]: ').lower()
+    notas['Aluno'] = input('Digite o nome do aluno [Digite sair para terminar o programa]: ').strip().lower()[0]
 
-    if notas['Alunos'] == 'sair':
+    if notas['Aluno'] == 'sair':
         print('Programa encerrado com sucesso!')
         break
 
     notas['Nota de Matemática'] = float(input('Digite a nota de Matemática: '))
     notas['Nota de Português'] = float(input('Digite a nota de Português: '))
     notas['Nota de História'] = float(input('Digite a nota de História: '))
-    notas_df.append(notas.copy())
+    nota_df.append(notas.copy())
 
-for notas['Alunos'] in notas_df:
-
-    media = (notas_df['Nota de Matemática'] + notas_df['Nota de História'] + notas_df['Nota de Português']) / 3
-
-print(media)
-
-
-
+for alunos_notas in nota_df:
+    media = (alunos_notas['Nota de Matemática'] + alunos_notas['Nota de Português'] + alunos_notas['Nota de História']) / 3
+    print(f'A média das notas de {alunos_notas['Aluno'].capitalize()} é igual a {round(media, 2)}.')
