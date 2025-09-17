@@ -23,8 +23,6 @@ plt.show()
 sns.jointplot(x='total_bill', y='tip', data=gorjeta, kind='reg')
 plt.show()
 
-
-
 #Gráficos comparativos para todas as variáveis numéricas
 sns.pairplot(gorjeta, hue='sex')
 plt.show()
@@ -32,7 +30,6 @@ plt.show()
 #Rugplot
 sns.rugplot(gorjeta['total_bill'])
 plt.show()
-
 
 #kde
 sns.kdeplot(gorjeta['total_bill'])
@@ -46,7 +43,6 @@ plt.show()
 sns.countplot(x='sex', data=gorjeta)
 plt.show()
 
-
 #Diagrama de Caixas
 sns.boxplot(x='day', y='total_bill', data=gorjeta)
 plt.show()
@@ -57,7 +53,6 @@ plt.show()
 #Diagrama de violino
 sns.violinplot(x='day', y='total_bill', data=gorjeta, hue='sex', split=True)
 plt.show()
-
 
 #Stripplot
 sns.stripplot(x='day', y='total_bill', data=gorjeta, jitter=True)
@@ -83,4 +78,18 @@ vp = voos.pivot_table(index='month', columns='year', values='passengers')
 sns.clustermap(vp, cmap='coolwarm', standart_scale=1)
 plt.show()
 
+#Grids
+
+flores = sns.load_dataset('iris')
+g = sns.PairGrid(flores)
+g.map_diag(sns.histplot)
+g.map_upper(plt.scatter)
+g.map_lower(sns.kdeplot)
+plt.show()
+
+g = sns.FacetGrid(data=gorjeta, col = 'time', row = 'smoker')
+g.map(sns.histplot, 'total_bill')
+plt.show()
+
 '''
+
